@@ -34,7 +34,7 @@ function copyDir(src, dest) {
 function buildFrontend() {
     console.log('🔨 Building frontend assets...');
 
-    const sourceDir = path.join(__dirname, '../../extracted_files');
+    const sourceDir = path.join(__dirname, '../extracted_files');
     const buildDir = path.join(__dirname, '../views');
     const assetsDir = path.join(__dirname, '../public/assets');
 
