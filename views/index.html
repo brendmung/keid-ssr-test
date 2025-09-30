@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="version" content="{{APP_VERSION}}">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keid List</title>
+
+	<meta property="og:title" content="Keid - Local Marketplace">
+	<meta property="og:description" content="Find and list local products and services in your area">
+	<meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+	<meta property="og:url" content="https://keid-list.pages.dev">
+	<meta property="og:type" content="website">
+
+	<!-- Twitter Card meta tags (optional) -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Keid - Local Marketplace">
+	<meta name="twitter:description" content="Find and list local products and services in your area">
+	<meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
+	<link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="stylesheet" href="/assets/styles.min.css?v=1.0.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+		<div class="container header-container">
+			<div class="logo" id="logo-home-link" style="cursor: pointer;">
+				<img src="/logo.svg" alt="K" class="logo-icon" onerror="this.style.display='none'"> Keid
+			</div>
+			<!-- Search Container -->
+			<div class="search-container" id="search-container">
+				<input type="text" id="search-input" placeholder="What are you looking for?">
+					<select id="category-select">
+    <option value="">All Categories</option>
+    <!-- The options will be populated dynamically by js/main.js calling populateCategoryDropdown -->
+</select>
+
+				<button class="btn-primary" id="search-button"><i class="fas fa-search"></i></button>
+			</div>
+
+			<!-- Location Dropdown -->
+			<div class="location-dialog">
+				<div class="location-icon" id="location-icon">
+					<i class="fas fa-map-marker-alt"></i>
+				</div>
+				<span id="location-text" style="display: none;"></span>
+			</div>
+			<!-- Mobile Search Icon -->
+			<button class="mobile-search-icon" id="mobile-search-icon">
+				<i class="fas fa-search"></i>
+			</button>
+			<!-- User Actions -->
+			<div class="user-actions" id="user-actions" style="display: none;">
+				<!-- Desktop View: Show Login/Signup Buttons -->
+				<div class="desktop-actions">
+					<button class="btn-primary" id="login-button">Login</button>
+					<button class="btn-success" id="signup-button">Sign Up</button>
+				</div>
+				<!-- Mobile View: Show Guest User Icon with Dropdown -->
+				<div class="mobile-actions dropdown">
+					<div class="guest-user-icon" id="guest-user-icon">
+						<i class="fas fa-user-circle" id="f-size"></i>
+					</div>
+					<div class="dropdown-content" id="guest-dropdown">
+						<a href="#" id="mobile-login-link">
+							<i class="fas fa-sign-in-alt"></i> Login
+						</a>
+						<a href="#" id="mobile-signup-link">
+							<i class="fas fa-user-plus"></i> Sign Up
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- User Profile -->
+			<div class="user-profile dropdown" id="user-profile" style="display: none;">
+				<img src="https://picsum.photos/400/400?random=11" alt="Profile Picture" id="nav-profile-img">
+				<div class="dropdown-content">
+					<a href="#" id="nav-profile-link"><i class="fas fa-user"></i> My Profile</a>
+					<a href="#" id="nav-dashboard-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+					<a href="#" id="nav-favorites-link"><i class="fas fa-bookmark"></i> Saved</a>
+					<a href="#" id="nav-settings-link"><i class="fas fa-cog"></i> Settings</a>
+					<a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+				</div>
+			</div>
+            <!-- Auth Loading Skeleton-->
+            <div class="auth-loading-skeleton" id="auth-loading-skeleton" style="display: none;">
+                <div class="skeleton-button" style="width: 80px; height: 35px; border-radius: 8px;"></div>
+            </div>
+		</div>
+	</header>
+
+    <!-- Navigation -->
+    <nav>
+		<div class="container">
+			<ul>
+				<li><a href="#" id="home-link"><i class="fas fa-home"></i> Home</a></li>
+				<li><a href="#" id="products-link"><i class="fas fa-box"></i> Products</a></li>
+				<li><a href="#" id="services-link"><i class="fas fa-tools"></i> Services</a></li>
+				<li><a href="#" id="about-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+				<li><a href="#" id="contact-link"><i class="fas fa-envelope"></i> Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container" id="main-content">
+            <!-- Content will be dynamically loaded here -->
+			<div class="not-found-container" style="background-color: transparent; box-shadow: none;">
+				<div class="page-loading-spinner"></div>
+			</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-container">
+				<div class="footer-section">
+					<div class="social-links">
+						<a href="https://www.facebook.com/profile.php?id=61581080977954"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://x.com"><i class="fab fa-twitter"></i></a>
+						<a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+						<a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<div class="footer-links" style="display: flex; justify-content: center; gap: 20px; margin-top: 15px;">
+						<a href="/contact">Contact</a>
+						<a href="/about">About</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2025 Keid. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+    
+<script src="/assets/app.min.js"></script></body>
+</html>

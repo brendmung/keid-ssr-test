@@ -1,0 +1,298 @@
+{
+    "cities": [
+        {
+            "id": "bulawayo",
+            "name": "Bulawayo",
+            "lat": -20.1500,
+            "lon": 28.5833
+        },
+        {
+            "id": "harare",
+            "name": "Harare",
+            "lat": -17.824858,
+            "lon": 31.053028
+        },
+        {
+            "id": "gweru",
+            "name": "Gweru",
+            "lat": -19.4500,
+            "lon": 29.8167
+        },
+        {
+            "id": "plumtree",
+            "name": "Plumtree",
+            "lat": -20.4833,
+            "lon": 27.8000
+        },
+        {
+            "id": "binga",
+            "name": "Binga",
+            "lat": -17.6333,
+            "lon": 27.3333
+        },
+        {
+            "id": "mutare",
+            "name": "Mutare",
+            "lat": -18.9707,
+            "lon": 32.6709
+        },
+        {
+            "id": "kwekwe",
+            "name": "Kwekwe",
+            "lat": -18.9167,
+            "lon": 29.8167
+        },
+        {
+            "id": "kadoma",
+            "name": "Kadoma",
+            "lat": -18.3333,
+            "lon": 30.1333
+        },
+        {
+            "id": "masvingo",
+            "name": "Masvingo",
+            "lat": -20.0667,
+            "lon": 30.8333
+        },
+        {
+            "id": "chinhoyi",
+            "name": "Chinhoyi",
+            "lat": -17.3667,
+            "lon": 30.1833
+        },
+        {
+            "id": "kariba",
+            "name": "Kariba",
+            "lat": -16.5167,
+            "lon": 28.8000
+        },
+        {
+            "id": "beitbridge",
+            "name": "Beitbridge",
+            "lat": -22.2167,
+            "lon": 29.9833
+        },
+        {
+            "id": "hwange",
+            "name": "Hwange",
+            "lat": -18.3667,
+            "lon": 26.5000
+        },
+        {
+            "id": "chiredzi",
+            "name": "Chiredzi",
+            "lat": -21.0500,
+            "lon": 31.6667
+        },
+        {
+            "id": "rusape",
+            "name": "Rusape",
+            "lat": -18.1667,
+            "lon": 32.1167
+        },
+        {
+            "id": "zvishavane",
+            "name": "Zvishavane",
+            "lat": -20.3333,
+            "lon": 30.0333
+        },
+        {
+            "id": "marondera",
+            "name": "Marondera",
+            "lat": -18.1833,
+            "lon": 31.5500
+        },
+        {
+            "id": "norton",
+            "name": "Norton",
+            "lat": -17.8833,
+            "lon": 30.6833
+        },
+        {
+            "id": "chegutu",
+            "name": "Chegutu",
+            "lat": -17.9167,
+            "lon": 30.4833
+        },
+        {
+            "id": "bindura",
+            "name": "Bindura",
+            "lat": -17.3000,
+            "lon": 31.3333
+        },
+        {
+            "id": "vic-falls",
+            "name": "Victoria Falls",
+            "lat": -17.9329,
+            "lon": 25.8307
+        },
+        {
+            "id": "karoi",
+            "name": "Karoi",
+            "lat": -16.7833,
+            "lon": 29.6833
+        },
+        {
+            "id": "chipinge",
+            "name": "Chipinge",
+            "lat": -20.1833,
+            "lon": 32.6167
+        },
+        {
+            "id": "guruve",
+            "name": "Guruve",
+            "lat": -16.5667,
+            "lon": 30.7000
+        },
+        {
+            "id": "shurugwi",
+            "name": "Shurugwi",
+            "lat": -19.6667,
+            "lon": 30.0000
+        },
+        {
+            "id": "mberengwa",
+            "name": "Mberengwa",
+            "lat": -20.8833,
+            "lon": 29.9833
+        },
+        {
+            "id": "lupane",
+            "name": "Lupane",
+            "lat": -18.9333,
+            "lon": 27.8000
+        },
+        {
+            "id": "tsholotsho",
+            "name": "Tsholotsho",
+            "lat": -19.7667,
+            "lon": 27.7667
+        },
+        {
+            "id": "umguza",
+            "name": "Umguza",
+            "lat": -19.9500,
+            "lon": 28.5333
+        },
+        {
+            "id": "chirumhanzu",
+            "name": "Chirumhanzu",
+            "lat": -19.3333,
+            "lon": 30.2000
+        },
+        {
+            "id": "gokwe",
+            "name": "Gokwe",
+            "lat": -18.2167,
+            "lon": 29.1333
+        },
+        {
+            "id": "makonde",
+            "name": "Makonde",
+            "lat": -17.3833,
+            "lon": 30.0167
+        },
+        {
+            "id": "rushinga",
+            "name": "Rushinga",
+            "lat": -16.5833,
+            "lon": 32.5833
+        }
+    ],
+    "campuses": [
+		{
+            "id": "nust",
+            "name": "NUST (Bulawayo)"
+        },
+		
+        {
+            "id": "uz",
+            "name": "UZ (Harare)"
+        },
+		
+		{
+            "id": "msu",
+            "name": "MSU (Gweru)"
+        },
+		
+        {
+            "id": "zou",
+            "name": "ZOU (Multiple)"
+        },
+		
+		{
+            "id": "bulawayo-poly",
+            "name": "Bulawayo Polytechnic"
+        },
+		
+        {
+            "id": "buse",
+            "name": "Bindura University of Science Education (Bindura)"
+        },
+        
+        {
+            "id": "ufh",
+            "name": "University of Fort Hare (UFH)"
+        },
+        {
+            "id": "gzu",
+            "name": "GZU (Masvingo)"
+        },
+        {
+            "id": "cut",
+            "name": "CUT (Chinhoyi)"
+        },
+        {
+            "id": "lsu",
+            "name": "LSU (Lupane)"
+        },
+        {
+            "id": "msuas",
+            "name": "Manicaland State University of Applied Sciences (Mutare)"
+        },
+        {
+            "id": "zegu",
+            "name": "Zimbabwe Ezekiel Guti University (Bindura)"
+        },
+        {
+            "id": "rcu",
+            "name": "Reformed Church University (Masvingo)"
+        },
+        {
+            "id": "solusi",
+            "name": "Solusi University (Bulawayo)"
+        },
+        {
+            "id": "africa-uni",
+            "name": "Africa University (Mutare)"
+        },
+        {
+            "id": "cuz",
+            "name": "Catholic University in Zimbabwe (Harare)"
+        },
+        {
+            "id": "wua",
+            "name": "Women\"s University in Africa (Harare)"
+        },
+        {
+            "id": "ziu",
+            "name": "Zimbabwe International University (Harare)"
+        },
+        {
+            "id": "ziva",
+            "name": "Ziva University (Kwekwe)"
+        },
+        {
+            "id": "hit",
+            "name": "Harare Institute of Technology (Harare)"
+        },
+        {
+            "id": "gweru-poly",
+            "name": "Gweru Polytechnic (Gweru)"
+        },
+        {
+            "id": "mutare-poly",
+            "name": "Mutare Polytechnic (Mutare)"
+        }
+    ]
+}

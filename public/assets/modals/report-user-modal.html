@@ -1,0 +1,37 @@
+<!-- modals/report-user-modal.html -->
+<div id="report-user-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header" style="padding: 10px 15px">
+            <h3 class="modal-title">Report <strong id="reported-user-name"></strong></h3>
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body" style="padding: 10px">
+            <p style="padding-bottom: 10px" >Please provide details about why you are reporting.</p>
+            <form id="report-user-form">
+                <input type="hidden" id="reported-user-id-input">
+                <div class="form-group">
+                    <select id="report-reason" required>
+                        <option value="">Select a reason</option>
+                        <option value="spam">Spam</option>
+                        <option value="harassment">Harassment</option>
+                        <option value="fake_profile">Fake Profile</option>
+                        <option value="inappropriate_content">Inappropriate Content</option>
+                        <option value="scam">Scam</option>
+                        <option value="fake_listings">Fake Listings</option>
+                        <option value="offensive_behavior">Offensive Behavior</option>
+                        <option value="impersonation">Impersonation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="report-description">Description (optional)</label>
+                    <textarea id="report-description" rows="4" placeholder="Provide more details about your report..."></textarea>
+                </div>
+                <div class="modal-footer" style="padding: 0px; border-top: none;">
+                    <button type="button" class="btn-danger modal-close-btn">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Report</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+{
+  "categories": [
+    {
+      "id": "accomodation-rent",
+      "name": "Rent & Accommodation",
+      "description": "Apartments, student houses, rooms, and rental properties.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Computers, phones, TVs, tech repair, IT services, electronic accessories, gadgets and more.",
+      "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "clothing-fashion",
+      "name": "Clothing & Fashion",
+      "description": "Clothing, jewelry, watches, bags, shoes, fashion accessories, custom tailoring, fashion designers and more.",
+      "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "vehicles-parts",
+      "name": "Vehicles & Parts",
+      "description": "Cars, trucks, vehicle parts, car services, automotive accessories, repairs, and more.",
+      "image": "https://images.unsplash.com/photo-1502744688674-c619d1586c9e?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "property-houses",
+      "name": "Property & Houses",
+      "description": "Houses for sale, residential stands, commercial property, and real estate listings.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "groceries-food",
+      "name": "Groceries & Food",
+      "description": "Packaged foods, beverages, meal delivery, catering services, restaurant services, food preparation, and more",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "agriculture-fresh-food",
+      "name": "Agriculture & Fresh Food",
+      "description": "Fresh produce, vegetables, fruits, eggs, dairy products, livestock, chickens, farm animals, seeds, plants, and farming supplies.",
+      "image": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "health-beauty",
+      "name": "Health & Beauty",
+      "description": "Cosmetics, skincare, salon services, wellness products, hair care, spa treatments, and all related items.",
+      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "home-living",
+      "name": "Home & Living",
+      "description": "Furniture, decor, maids, kitchenware, appliances, household items, home repairs and more",
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "trades-home-services",
+      "name": "Trades & Home Services",
+      "description": "Plumbing, building, electrical work, welding, satellite/dish installation, carpentry, roofing, tiling, painting and repair services.",
+      "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "transportation-hiring",
+      "name": "Transportation & Hiring",
+      "description": "Taxi services, moving services, driver hire, transport solutions, logistics and all transportation and hiring related services.",
+      "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "freelance-creative-work",
+      "name": "Freelance & Creative Work",
+      "description": "Writing, marketing, programming, consulting, content creation, social media, graphic design, printing, photography, videography, branding, crafts, and more.",
+      "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "sports-fitness",
+      "name": "Sports & Fitness",
+      "description": "Sporting equipment, gym gear, personal training, workout services, sports coaching and more.",
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "description": "Movies, gaming, performers, musicians, DJs, weddings, parties, event planning, catering, tickets, concerts, shows, streaming, venues, and more.",
+      "image": "https://images.unsplash.com/photo-1489599904593-130ba0da7a5b?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "books-tutoring",
+      "name": "Books & Tutoring",
+      "description": "Books, tutoring, writing, mentoring, educational materials, skill training, driving lessons and more.",
+      "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "general-other",
+      "name": "General & Other",
+      "description": "Miscellaneous items, unique services, personal belongings, tools, equipment, and more.",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop"
+    }
+  ]
+}

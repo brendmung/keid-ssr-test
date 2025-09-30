@@ -1,0 +1,36 @@
+{
+  "name": "keid-marketplace-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Keid Marketplace with secure API handling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "npm run build-frontend",
+    "build-frontend": "node build/build-frontend.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^6.10.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.5.0",
+    "multer": "^1.4.5-lts.1",
+    "express-validator": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "terser": "^5.19.4",
+    "fs-extra": "^11.1.1"
+  },
+  "keywords": [
+    "marketplace",
+    "api",
+    "backend",
+    "secure"
+  ],
+  "author": "MiniMax Agent",
+  "license": "MIT"
+}
