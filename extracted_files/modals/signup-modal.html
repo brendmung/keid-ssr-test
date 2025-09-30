@@ -1,0 +1,43 @@
+<div class="modal" id="signup-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Create an Account</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" minlength="5" maxlength="50" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" maxlength="50" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                    <div class="password-strength-meter">
+                        <div class="strength-bar"></div>
+                    </div>
+                    <div class="password-requirements">
+                        <p class="requirement" data-requirement="length"><i class="fas fa-circle"></i> At least 8 characters</p>
+                        <p class="requirement" data-requirement="uppercase"><i class="fas fa-circle"></i> Contains uppercase letter</p>
+                        <p class="requirement" data-requirement="lowercase"><i class="fas fa-circle"></i> Contains lowercase letter</p>
+                        <p class="requirement" data-requirement="number"><i class="fas fa-circle"></i> Contains number</p>
+                        <p class="requirement" data-requirement="special"><i class="fas fa-circle"></i> Contains special character</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" required>
+                    <div id="password-match-feedback" style="display: none; margin-top: 5px; font-size: 12px;"></div>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Sign Up</button>
+            </form>
+            <div style="text-align: center; margin-top: 20px;">
+                <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>

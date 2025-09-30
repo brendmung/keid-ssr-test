@@ -1,0 +1,34 @@
+<div class="modal" id="location-modal">
+		<div class="modal-content" style="max-width: 500px;">
+			<div class="modal-header">
+				<h2 class="modal-title">Select Location</h2>
+				<button class="modal-close">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<input type="text" id="location-search" placeholder="Search for a city or campus..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: medium;">
+				</div>
+
+				<div class="location-tabs">
+					<div class="tab active" id="city-tab" data-tab="city">City/Town</div>
+					<div class="tab" id="campus-tab" data-tab="campus">Campus Connect</div>
+				</div>
+
+				<div class="location-section active" id="city-list-section">
+					<div id="city-list" class="location-list"></div>
+				</div>
+
+				<div class="location-section" id="campus-list-section">
+					<div id="campus-list" class="location-list"></div>
+				</div>
+			</div>
+			<div style="display: flex; gap: 10px; margin: 0px 10px 2px 10px;">
+					<div id="default-to-all-button" style="flex: 1 1 0%; padding: 5px; cursor: pointer; font-size: 14px; color: white; text-align: center; border-radius: 8px; background: rgb(52, 152, 219); display: block;">
+						All locations
+					</div>
+					<div id="auto-detect-location-button" style="flex: 1 1 0%; padding: 5px; cursor: pointer; font-size: 14px; color: white; text-align: center; border-radius: 8px; background: rgb(46, 204, 113); display: block;">
+						<i class="fas fa-location-arrow"></i> Auto Detect
+					</div>
+				</div>
+		</div>
+	</div>

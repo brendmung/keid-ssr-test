@@ -1,0 +1,34 @@
+<div class="modal" id="otp-modal">
+    <div class="modal-content" style="max-width: 400px;">
+        <div class="modal-header">
+            <h2 class="modal-title">Verify Your Email</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- Envelope Icon Container -->
+            <div class="otp-icon-container">
+                <i class="fas fa-envelope otp-icon"></i>
+            </div>
+            <p style="text-align: center; margin-bottom: 20px;">
+                We've sent a verification code to <strong id="otp-email"></strong>
+            </p>
+            <div class="otp-container">
+                <!-- CHANGE type="number" to type="text" -->
+                <input type="text" maxlength="1" class="otp-input" id="otp-1" data-next="otp-2">
+                <input type="text" maxlength="1" class="otp-input" id="otp-2" data-next="otp-3" data-previous="otp-1">
+                <input type="text" maxlength="1" class="otp-input" id="otp-3" data-next="otp-4" data-previous="otp-2">
+                <input type="text" maxlength="1" class="otp-input" id="otp-4" data-previous="otp-3">
+            </div>
+            <p id="otp-error" style="color: #e74c3c; text-align: center; margin-top: 10px; display: none;">
+                <i class="fas fa-exclamation-circle"></i> Invalid OTP. Please try again.
+            </p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn-primary" id="resend-otp-btn" disabled>
+                    <span id="resend-text">Resend OTP in </span>
+                    <span id="resend-timer">Resend OTP</span>
+                </button>
+            </div>
+            <input type="hidden" id="otp-email-for-reset">
+        </div>
+    </div>
+</div>

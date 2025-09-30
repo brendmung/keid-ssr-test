@@ -1,0 +1,62 @@
+<div class="modal" id="edit-listing-modal">
+    <div class="modal-content" style="max-width: 600px;">
+        <div class="modal-header">
+            <h2 class="modal-title">Edit Listing</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="edit-listing-form">
+                <div class="form-group">
+                    <label for="edit-listing-type">Listing Type</label>
+                    <select id="edit-listing-type" required disabled>
+                        <option value="">Select Type</option>
+                        <option value="product">Product</option>
+                        <option value="service">Service</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-listing-title">Title</label>
+                    <input type="text" minlength="3" maxlength="50" id="edit-listing-title" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="edit-listing-price">Price ($)</label>
+                    <input type="number" id="edit-listing-price" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-listing-location">Location</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" id="edit-listing-location-name" readonly>
+                        <input type="hidden" id="edit-listing-location-id">
+                        <button type="button" class="btn-primary" id="edit-listing-location-btn">
+                            <i class="fas fa-map-marker-alt"></i> Select
+                        </button>
+                    </div>
+                </div>
+                <!-- Add Category Dropdown -->
+                <div class="form-group">
+                    <label for="edit-listing-category">Category</label>
+                    <select id="edit-listing-category" required>
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-listing-description">Description</label>
+                    <textarea id="edit-listing-description" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Images (Max 5)</label>
+                    <div class="image-upload" id="edit-image-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Click to upload images</p>
+                        <input type="file" id="edit-image-input" accept="image/*" multiple style="display: none;">
+                    </div>
+                    <div class="image-preview" id="edit-image-preview"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-danger modal-close-btn">Cancel</button>
+                    <button type="submit" class="btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
