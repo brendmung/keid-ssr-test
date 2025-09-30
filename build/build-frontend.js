@@ -92,6 +92,7 @@ function buildFrontend() {
         ];
 
         let combinedJS = '';
+        let mainLogicContent = ''; // To hold the content of the main DCL listener
 
         // Add secure config at the top
         combinedJS += `
@@ -127,12 +128,30 @@ const IMGBB_API_KEY = null; // No longer needed on client side
                 content = content.replace(/^export.*$/gm, '');
                 content = content.replace(/import.*config\.js.*$/gm, '');
                 
+                // CRITICAL FIX: Extract the main logic from the DCL wrapper in js/main.js
+                // This assumes js/main.js contains the primary DCL listener.
+                if (file === 'js/main.js') {
+                    // Regex to capture content inside the DCL listener
+                    const dclRegex = /document\.addEventListener\(['"]DOMContentLoaded['"],\s*async\s*\(\)\s*=>\s*{(.*)}\s*\)\s*;?\s*$/s;
+                    const match = content.match(dclRegex);
+                    if (match && match[1]) {
+                        mainLogicContent = match[1].trim();
+                        // Remove the DCL wrapper from the content to avoid redundant listeners
+                        content = content.replace(dclRegex, '');
+                    }
+                }
+
                 // Replace API_BASE_URL usage with function calls
                 content = content.replace(/API_BASE_URL/g, 'getApiBaseUrl()');
                 
                 combinedJS += `\n// === ${file} ===\n${content}\n`;
             }
         }
+        
+        // Define the startApp function with the extracted main logic
+        // This function will contain the original DOMContentLoaded logic
+        combinedJS += `\n// === Main App Logic Wrapper ===\nasync function startApp() {\n${mainLogicContent}\n}\n`;
+
 
         // Process view files
         for (const file of viewFiles) {
@@ -145,12 +164,13 @@ const IMGBB_API_KEY = null; // No longer needed on client side
             }
         }
 
-        // Add initialization code
+        // Add initialization code (REPLACING THE ORIGINAL INJECTION)
+        // This ensures initConfig() is awaited before the main app logic runs.
         combinedJS += `
 // Initialize configuration and start app
 document.addEventListener('DOMContentLoaded', async () => {
     await initConfig();
-    // The original DOMContentLoaded code will run here
+    startApp();
 });
 `;
 
@@ -160,9 +180,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             .replace(/\/\*[\s\S]*?\*\//g, '') // Remove block comments
             .replace(/\/\/.*$/gm, '') // Remove line comments
             .replace(/\s+/g, ' ') // Replace multiple whitespace with single space
-            .replace(/;\s*}/g, ';}') // Clean up statements
-            .replace(/{\s*/g, '{') // Clean up braces
-            .replace(/;\s+/g, ';') // Clean up semicolons
+            .replace(/;\s*}/g, '}')
+            .replace(/{\s*/g, '{')
+            .replace(/:\s*/g, ':')
+            .replace(/,\s*/g, ',')
             .trim();
 
         fs.writeFileSync(path.join(assetsDir, 'app.min.js'), minifiedJS);
